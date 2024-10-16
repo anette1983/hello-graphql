@@ -1,11 +1,14 @@
 import express from 'express';
 import { graphqlHTTP } from 'express-graphql';
+import cors from 'cors';
 import schema from './data/schema';
 import resolvers from './data/resolvers';
 
 const PORT = 8080;
 
 const app = express();
+
+app.use(cors());
 
 app.get('/', (req, res) => {
 	res.send('GraphQL is amazing!');

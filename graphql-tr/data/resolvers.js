@@ -10,7 +10,7 @@ const resolvers = {
 		}
 	},
 
-	getAllProducts: async ({ id }) => {
+	getAllProducts: async () => {
 		try {
 			const products = await Widgets.find();
 			return products;
