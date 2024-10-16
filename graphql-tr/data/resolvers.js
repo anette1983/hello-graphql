@@ -10,6 +10,15 @@ const resolvers = {
 		}
 	},
 
+	getAllProducts: async ({ id }) => {
+		try {
+			const products = await Widgets.find();
+			return products;
+		} catch (error) {
+			throw new Error(error);
+		}
+	},
+
 	createProduct: async ({ input }) => {
 		const newWidget = new Widgets({
 			name: input.name,
@@ -24,6 +33,26 @@ const resolvers = {
 		try {
 			await newWidget.save();
 			return newWidget;
+		} catch (error) {
+			throw new Error(error);
+		}
+	},
+	updateProduct: async ({ input }) => {
+		try {
+			const updateWidget = await Widgets.findOneAndUpdate(
+				{ _id: input.id },
+				input,
+				{ new: true }
+			);
+			return updateWidget;
+		} catch (error) {
+			throw new Error(error);
+		}
+	},
+	deleteProduct: async ({ id }) => {
+		try {
+			await Widgets.deleteOne({ _id: id });
+			return 'Successfully deleted widget';
 		} catch (error) {
 			throw new Error(error);
 		}
