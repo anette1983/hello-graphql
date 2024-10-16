@@ -20,9 +20,17 @@ const schema = buildSchema(`
         store: String
     }
 
+    type Category {
+        id: ID
+        category: String
+        description: String
+    }
+
     type Query {
         getProduct(id: ID): Product
         getAllProducts: [Product]
+        getCategory(id: ID): Category
+        getAllCategories: [Category]
     }
 
      input StoreInput {
@@ -39,8 +47,15 @@ const schema = buildSchema(`
         stores: [StoreInput]!
     }
 
+    input CategoryInput {
+        category: String
+        description: String
+    }
+
+
     type Mutation {
         createProduct(input: ProductInput): Product
+         createCategory(input: CategoryInput): Category
     }
 
     `);
