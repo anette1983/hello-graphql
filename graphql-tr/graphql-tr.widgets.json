@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "670fcf207ed0ec91f601c917"
+  },
+  "price": 22.99,
+  "name": "new widget 1",
+  "description": "descr",
+  "soldout": "ONSALE",
+  "inventory": null,
+  "stores": [
+    {
+      "store": "some store"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "670fcf207ed0ec91f601c918"
+  },
+  "price": 22.99,
+  "name": "new widget 2",
+  "description": "descr",
+  "soldout": "ONSALE",
+  "inventory": null,
+  "stores": [
+    {
+      "store": "some store"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "670fcf207ed0ec91f601c919"
+  },
+  "price": 22.99,
+  "name": "new widget 3",
+  "description": "descr",
+  "soldout": "ONSALE",
+  "inventory": null,
+  "stores": [
+    {
+      "store": "some store"
+    }
+  ]
+}]
